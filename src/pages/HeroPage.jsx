@@ -3,6 +3,7 @@ import { useTheme } from '../context/ThemeContext';
 import avatar1 from '../assets/avatar1.jpg';
 import avatar2 from '../assets/avatar2.jpg';
 import avatar3 from '../assets/avatar3.jpg';
+import heroVideo from '../assets/video.mp4';
 
 export default function HeroPage() {
   const { isDark } = useTheme();
@@ -30,7 +31,7 @@ export default function HeroPage() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover opacity-100"
         >
-          <source src="/video.mp4" type="video/mp4" />
+          <source src={heroVideo} type="video/mp4" />
         </video>
 
         {/* Dark overlay */}
