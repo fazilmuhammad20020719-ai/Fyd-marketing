@@ -1,14 +1,15 @@
+import { ThemeProvider } from './context/ThemeContext';
 import Navbar from './components/Navbar';
 import HeroPage from './pages/HeroPage';
 
 function App() {
   return (
-    <>
+    <ThemeProvider>
       <Navbar />
-      <main className="bg-[#0d0d0d]">
+      <main>
         <HeroPage />
       </main>
-    </>
+    </ThemeProvider>
   );
 }
 
