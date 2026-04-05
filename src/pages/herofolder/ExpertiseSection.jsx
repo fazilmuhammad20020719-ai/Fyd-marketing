@@ -5,17 +5,7 @@ export default function ExpertiseSection() {
   const { isDark } = useTheme();
 
   return (
-    <section className={`relative overflow-hidden py-24 px-6 sm:px-12 lg:px-16 transition-colors duration-700 ${isDark ? 'bg-[#0d0d0d]' : 'bg-[#f4f2ff]'}`}>
-
-      {/* Background Grid Lines (5 Lines) */}
-      <div className="absolute inset-0 pointer-events-none flex justify-evenly z-0">
-        <div className={`w-px h-full ${isDark ? 'bg-white-[0.04] bg-white/5' : 'bg-black/5'}`}></div>
-        <div className={`w-px h-full ${isDark ? 'bg-white-[0.04] bg-white/5' : 'bg-black/5'}`}></div>
-        <div className={`w-px h-full ${isDark ? 'bg-white-[0.04] bg-white/5' : 'bg-black/5'}`}></div>
-        <div className={`w-px h-full ${isDark ? 'bg-white-[0.04] bg-white/5' : 'bg-black/5'}`}></div>
-        <div className={`w-px h-full ${isDark ? 'bg-white-[0.04] bg-white/5' : 'bg-black/5'}`}></div>
-      </div>
-
+    <section className="relative overflow-hidden py-24 px-6 sm:px-12 lg:px-16">
       <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
 
         {/* ─── Left Column — Corner Cropped Image Collage ─── */}
@@ -30,7 +20,7 @@ export default function ExpertiseSection() {
           <div className={`absolute -top-5 -left-5 lg:-top-8 lg:-left-8 w-[85%] lg:w-[540px] z-10 pr-5 pb-5 rounded-br-[2.5rem] transition-colors duration-700 ${isDark ? 'bg-[#0d0d0d]' : 'bg-[#f4f2ff]'}`}>
 
             {/* Inner Text Card */}
-            <div className={`w-full min-h-[270px] rounded-[1.75rem] p-8 flex flex-col justify-center transition-all duration-300 relative z-20 ${isDark ? 'bg-[#151515] border border-white/5 shadow-[0_0_30px_rgba(200,42,239,0.15)] shadow-[#c82aef]/20' : 'bg-[#faf8ff] border border-white shadow-[0_15px_40px_rgba(200,42,239,0.1)] shadow-purple-500/10'}`}>
+            <div className={`animate-float w-full min-h-[270px] rounded-[1.75rem] p-8 flex flex-col justify-center transition-all duration-300 relative z-20 ${isDark ? 'bg-[#151515] border border-white/5 shadow-[0_0_30px_rgba(200,42,239,0.15)] shadow-[#c82aef]/20' : 'bg-[#faf8ff] border border-white shadow-[0_15px_40px_rgba(200,42,239,0.1)] shadow-purple-500/10'}`}>
               <h3 className={`text-[1.75rem] sm:text-[2rem] lg:text-[2.2rem] font-bold tracking-tight leading-[1.25] mb-5 ${isDark ? 'text-white' : 'text-[#0a0a1a]'}`}>
                 Ready to Elevate Your<br />Digital Presence?
               </h3>
@@ -92,7 +82,7 @@ export default function ExpertiseSection() {
             </ul>
 
             {/* Years of Experience Card */}
-            <div className={`p-8 rounded-[1.75rem] transition-all duration-300 w-full lg:w-[380px] min-h-[280px] flex flex-col justify-center shrink-0 relative ${isDark ? 'bg-[#151515] border border-white/5 shadow-[20px_0_50px_-15px_rgba(200,42,239,0.3)] shadow-[#c82aef]/20' : 'bg-gradient-to-br from-[#ead5ff] via-[#f4f0f9] to-[#f8f7f9] border border-white shadow-[0_10px_40px_rgba(200,42,239,0.15)] shadow-[#c82aef]/20'}`}>
+            <div className={`animate-float-delayed p-8 rounded-[1.75rem] transition-all duration-300 w-full lg:w-[380px] min-h-[280px] flex flex-col justify-center shrink-0 relative ${isDark ? 'bg-[#151515] border border-white/5 shadow-[20px_0_50px_-15px_rgba(200,42,239,0.3)] shadow-[#c82aef]/20' : 'bg-gradient-to-br from-[#ead5ff] via-[#f4f0f9] to-[#f8f7f9] border border-white shadow-[0_10px_40px_rgba(200,42,239,0.15)] shadow-[#c82aef]/20'}`}>
               <div className="flex items-center gap-5 mb-5">
                 <div
                   className="font-medium tracking-tight flex items-center shrink-0"

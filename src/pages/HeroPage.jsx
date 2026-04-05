@@ -17,8 +17,7 @@ export default function HeroPage() {
   return (
     <section
       id="hero"
-      className={`relative pt-28 pb-6 px-6 transition-colors duration-700 ${isDark ? 'bg-[#0d0d0d]' : 'bg-[#f4f2ff]'
-        }`}
+      className="relative pt-28 pb-6 px-6"
     >
       {/* ── Hero Card Container ── */}
       <div className={`relative w-full mx-auto rounded-3xl overflow-hidden min-h-[85vh] border transition-colors duration-500 ${isDark ? 'border-white/30' : 'border-gray-900/50'}`}>
