@@ -3,6 +3,16 @@ import Navbar from './components/Navbar';
 import HeroPage from './pages/HeroPage';
 import BrandsSection from './pages/herofolder/BrandsSection';
 import ExpertiseSection from './pages/herofolder/ExpertiseSection';
+import WhyChooseSection from './pages/herofolder/WhyChooseSection';
+import BannerSection from './pages/herofolder/BannerSection';
+import ServicesSection from './pages/herofolder/ServicesSection';
+import CaseStudiesSection from './pages/herofolder/CaseStudiesSection';
+import TestimonialsSection from './pages/herofolder/TestimonialsSection';
+import HowItWorksSection from './pages/herofolder/HowItWorksSection';
+import PricingSection from './pages/herofolder/PricingSection';
+import NewsletterSection from './pages/herofolder/NewsletterSection';
+import BlogSection from './pages/herofolder/BlogSection';
+import Footer from './pages/herofolder/Footer';
 
 function MainLayout() {
   const { isDark } = useTheme();
@@ -23,7 +33,17 @@ function MainLayout() {
         <HeroPage />
         <ExpertiseSection />
         <BrandsSection />
+        <WhyChooseSection />
+        <BannerSection />
+        <ServicesSection />
+        <CaseStudiesSection />
+        <TestimonialsSection />
+        <HowItWorksSection />
+        <PricingSection />
+        <NewsletterSection />
+        <BlogSection />
       </main>
+      <Footer />
     </div>
   );
 }
