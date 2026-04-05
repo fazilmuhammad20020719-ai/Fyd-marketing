@@ -101,7 +101,7 @@ export default function Navbar() {
           <img
             src={isDark ? darkLogo : lightLogo}
             alt="Fyd Marketing"
-            className="h-13 w-auto scale-[2.8] origin-left mt-1 transition-all duration-300 group-hover:scale-[3.1]"
+            className="h-10 w-auto scale-[2.8] origin-left mt-1 transition-all duration-300 group-hover:scale-[3.1]"
           />
         </a>
 
