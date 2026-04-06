@@ -7,9 +7,9 @@ const CheckIcon = ({ isDark }) => (
   </svg>
 );
 
-const ArrowBtn = ({ label }) => (
+const ArrowBtn = ({ label, isDark }) => (
   <a href="#details" className="flex items-center justify-between w-full px-6 py-3.5 rounded-full border border-[#c82aef] hover:bg-[#c82aef]/5 transition-all duration-300 group">
-    <span className="text-[14px] font-bold text-[#0a0a1a] dark:text-white">{label}</span>
+    <span className={`text-[14px] font-bold ${isDark ? 'text-white' : 'text-[#0a0a1a]'}`}>{label}</span>
     <span className="flex items-center justify-center w-9 h-9 rounded-full bg-[#c82aef] text-white shadow-md shadow-purple-500/30 transition-transform group-hover:translate-x-1">
       <svg className="w-4 h-4 ml-0.5" fill="none" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" strokeWidth={3} strokeLinecap="round" strokeLinejoin="round" /></svg>
     </span>
@@ -91,7 +91,7 @@ export default function PricingSection() {
                 <span className={`text-5xl font-extrabold tracking-tight ${isDark ? 'text-white' : 'text-[#0a0a1a]'}`}>$99</span>
                 <span className={`text-sm font-semibold ${isDark ? 'text-gray-400' : 'text-[#5a5a6e]'}`}>/Month</span>
               </div>
-              <div className="relative z-10"><ArrowBtn label="View Details" /></div>
+              <div className="relative z-10"><ArrowBtn label="View Details" isDark={isDark} /></div>
               <div className="flex flex-col gap-2.5 mt-1">
                 {STARTER_FEATURES.map((f, i) => (
                   <div key={i} className="flex items-start gap-2.5">
@@ -119,7 +119,7 @@ export default function PricingSection() {
                   <span className={`text-5xl font-extrabold tracking-tight ${isDark ? 'text-white' : 'text-[#0a0a1a]'}`}>$399</span>
                   <span className={`text-sm font-semibold ${isDark ? 'text-gray-400' : 'text-[#5a5a6e]'}`}>/Month</span>
                 </div>
-                <ArrowBtn label="View Details" />
+                <ArrowBtn label="View Details" isDark={isDark} />
               </div>
               
               <div className="relative z-10 flex flex-col gap-3.5 mt-8 mb-6">
@@ -202,7 +202,7 @@ export default function PricingSection() {
                 <span className={`text-5xl font-extrabold tracking-tight ${isDark ? 'text-white' : 'text-[#0a0a1a]'}`}>$299</span>
                 <span className={`text-sm font-semibold ${isDark ? 'text-gray-400' : 'text-[#5a5a6e]'}`}>/Month</span>
               </div>
-              <ArrowBtn label="View Details" />
+              <ArrowBtn label="View Details" isDark={isDark} />
               <div className="flex flex-col gap-2.5 mt-1">
                 {GROWTH_FEATURES.map((f, i) => (
                   <div key={i} className="flex items-start gap-2.5">

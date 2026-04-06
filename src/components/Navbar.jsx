@@ -2,30 +2,31 @@ import { useState, useEffect } from 'react';
 import { useTheme } from '../context/ThemeContext';
 import lightLogo from '../assets/lightLogo.svg.svg';
 import darkLogo from '../assets/darkLogo.svg';
+import { Link, useLocation } from 'react-router-dom';
 
 const navLinks = [
-  { label: 'Home', href: '#' },
-  { label: 'About', href: '#about' },
+  { label: 'Home', href: '/' },
+  { label: 'About', href: '/about' },
   {
     label: 'Services',
-    href: '#services',
+    href: '/#services',
     children: [
-      { label: 'SEO Optimization', href: '#seo' },
-      { label: 'Social Media', href: '#social' },
-      { label: 'Content Marketing', href: '#content' },
-      { label: 'PPC Advertising', href: '#ppc' },
+      { label: 'SEO Optimization', href: '/#seo' },
+      { label: 'Social Media', href: '/#social' },
+      { label: 'Content Marketing', href: '/#content' },
+      { label: 'PPC Advertising', href: '/#ppc' },
     ],
   },
   {
     label: 'Pages',
-    href: '#pages',
+    href: '/#pages',
     children: [
-      { label: 'Case Studies', href: '#cases' },
-      { label: 'Testimonials', href: '#testimonials' },
-      { label: 'Pricing', href: '#pricing' },
+      { label: 'Case Studies', href: '/#cases' },
+      { label: 'Testimonials', href: '/#testimonials' },
+      { label: 'Pricing', href: '/#pricing' },
     ],
   },
-  { label: 'Contact Us', href: '#contact' },
+  { label: 'Contact Us', href: '/contact' },
 ];
 
 /* ── Sun / Moon toggle ── */
@@ -74,9 +75,19 @@ function ThemeToggleIcon() {
 /* ── Navbar ── */
 export default function Navbar() {
   const { isDark } = useTheme();
+  const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
+
+  const isActive = (href) => {
+    if (href === '/') return location.pathname === '/';
+    if (href.startsWith('/#')) {
+      const hash = href.substring(1);
+      return location.pathname === '/' && location.hash === hash;
+    }
+    return location.pathname === href;
+  };
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -97,13 +108,13 @@ export default function Navbar() {
           }`}
       >
         {/* Logo */}
-        <a href="#" className="flex items-center group pl-2 py-1">
+        <Link to="/" className="flex items-center group pl-2 py-1">
           <img
             src={isDark ? darkLogo : lightLogo}
             alt="Fyd Marketing"
             className="h-10 w-auto scale-[2.8] origin-left mt-1 transition-all duration-300 group-hover:scale-[3.1]"
           />
-        </a>
+        </Link>
 
         {/* Desktop Links */}
         <ul className="hidden lg:flex items-center gap-1">
@@ -114,10 +125,12 @@ export default function Navbar() {
               onMouseEnter={() => link.children && setOpenDropdown(link.label)}
               onMouseLeave={() => setOpenDropdown(null)}
             >
-              <a
-                href={link.href}
-                className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200 flex items-center gap-1 ${link.label === 'Home'
-                  ? isDark ? 'text-purple-400' : 'text-purple-600'
+              <Link
+                to={link.href}
+                className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 flex items-center gap-1 ${isActive(link.href)
+                  ? isDark 
+                    ? 'text-purple-400 bg-purple-500/10 shadow-[0_0_15px_rgba(168,85,247,0.15)]' 
+                    : 'text-purple-600 bg-purple-50 shadow-sm'
                   : isDark
                     ? 'text-gray-300 hover:text-white hover:bg-white/5'
                     : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100/60'
@@ -133,7 +146,7 @@ export default function Navbar() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 )}
-              </a>
+              </Link>
 
               {/* Dropdown */}
               {link.children && (
@@ -148,16 +161,20 @@ export default function Navbar() {
                 >
                   <div className="p-2">
                     {link.children.map((child) => (
-                      <a
+                      <Link
                         key={child.label}
-                        href={child.href}
-                        className={`block px-4 py-2.5 text-sm rounded-lg transition-colors duration-200 ${isDark
-                          ? 'text-gray-300 hover:text-white hover:bg-purple-500/15'
-                          : 'text-gray-600 hover:text-purple-700 hover:bg-purple-50'
+                        to={child.href}
+                        className={`block px-4 py-2.5 text-sm rounded-lg transition-all duration-200 ${isActive(child.href)
+                          ? isDark 
+                            ? 'text-purple-400 bg-purple-500/10' 
+                            : 'text-purple-700 bg-purple-100/50'
+                          : isDark
+                            ? 'text-gray-300 hover:text-white hover:bg-purple-500/15'
+                            : 'text-gray-600 hover:text-purple-700 hover:bg-purple-50'
                           }`}
                       >
                         {child.label}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
@@ -217,10 +234,12 @@ export default function Navbar() {
         >
           {navLinks.map((link) => (
             <div key={link.label}>
-              <a
-                href={link.href}
-                className={`block px-4 py-3 text-sm font-medium rounded-lg transition-colors ${link.label === 'Home'
-                  ? isDark ? 'text-purple-400' : 'text-purple-600'
+              <Link
+                to={link.href}
+                className={`block px-4 py-3 text-sm font-medium rounded-lg transition-all ${isActive(link.href)
+                  ? isDark 
+                    ? 'text-purple-400 bg-purple-500/10' 
+                    : 'text-purple-600 bg-purple-50'
                   : isDark
                     ? 'text-gray-300 hover:text-white hover:bg-white/5'
                     : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
@@ -228,19 +247,21 @@ export default function Navbar() {
                 onClick={() => !link.children && setMobileOpen(false)}
               >
                 {link.label}
-              </a>
+              </Link>
               {link.children && (
                 <div className={`ml-4 border-l pl-4 ${isDark ? 'border-white/10' : 'border-gray-200'}`}>
                   {link.children.map((child) => (
-                    <a
+                    <Link
                       key={child.label}
-                      href={child.href}
-                      className={`block px-4 py-2 text-sm transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-gray-500 hover:text-gray-900'
+                      to={child.href}
+                      className={`block px-4 py-2 text-sm transition-all ${isActive(child.href)
+                        ? isDark ? 'text-purple-400 font-bold' : 'text-purple-600 font-bold'
+                        : isDark ? 'text-gray-400 hover:text-white' : 'text-gray-500 hover:text-gray-900'
                         }`}
                       onClick={() => setMobileOpen(false)}
                     >
                       {child.label}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               )}
