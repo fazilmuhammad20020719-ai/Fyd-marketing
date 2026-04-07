@@ -100,7 +100,7 @@ export default function WhoWeAre() {
               isDark ? 'text-gray-400' : 'text-gray-600'
             }`}
           >
-            At Fyd Marketing, we specialize in crafting innovative digital marketing
+            At Fyd Squad, we specialize in crafting innovative digital marketing
             strategies that drive real business growth. Our about ensures your brand
             stays ahead in the competitive digital landscape.
           </p>

@@ -95,7 +95,7 @@ export default function WhyChooseSection() {
               <div className="w-2 h-2 rounded-full bg-[#c82aef]" />
             </div>
             <span className={`text-[12px] font-bold uppercase tracking-wider ${isDark ? 'text-gray-200' : 'text-[#0a0a1a]'}`}>
-              Why Choose Fyd Marketing
+              Why Choose Fyd Squad
             </span>
           </div>
 
@@ -108,7 +108,7 @@ export default function WhyChooseSection() {
           {/* Paragraph */}
           <p className={`text-[15.5px] sm:text-[16.5px] leading-relaxed mb-10 md:pr-4 font-medium ${isDark ? 'text-[#8a8a8a]' : 'text-[#5a5a6e]'}`}>
             In the fast-paced digital world, choosing the right marketing partner
-            makes all the difference. At Fyd Marketing, we don't just create campaigns—we
+            makes all the difference. At Fyd Squad, we don't just create campaigns—we
             craft strategies that deliver measurable success.
           </p>
 
@@ -131,7 +131,7 @@ export default function WhyChooseSection() {
                   : 'bg-gradient-to-br from-[#f8f0ff] to-[#fdfdff] border border-[#ecd4ff] shadow-[0_15px_40px_rgba(200,42,239,0.08)] shadow-purple-500/10'
               }`}>
                 <h4 className={`text-[1.1rem] sm:text-[1.35rem] font-bold tracking-tight leading-[1.3] mb-6 ${isDark ? 'text-white' : 'text-[#0a0a1a]'}`}>
-                  Partner with Fyd Marketing & <br />
+                  Partner with Fyd Squad & <br />
                   take your brand to the<br />
                   next level.
                 </h4>

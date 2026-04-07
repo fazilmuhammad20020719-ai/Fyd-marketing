@@ -40,7 +40,7 @@ export default function BannerSection() {
 
           {/* Heading */}
           <h2 className={`text-3xl sm:text-4xl lg:text-[2.75rem] font-extrabold tracking-tight leading-[1.1] mb-5 ${isDark ? 'text-white' : 'text-[#0a0a1a]'}`}>
-            Transform Your Business with Fyd Marketing!
+            Transform Your Business with Fyd Squad!
           </h2>
 
           {/* Description text */}

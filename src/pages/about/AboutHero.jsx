@@ -30,7 +30,7 @@ export default function AboutHero() {
           }`}
           style={{ fontFamily: "'Inter', sans-serif" }}
         >
-          About Fyd Marketing
+          About Fyd Squad
         </h1>
         <p
           className={`text-sm md:text-base font-medium relative z-10 ${

@@ -44,7 +44,7 @@ export default function Footer() {
             <a href="#" className="inline-block relative group">
               <img
                 src={isDark ? darkLogo : lightLogo}
-                alt="Fyd Marketing"
+                alt="Fyd Squad"
                 className="h-13 w-auto scale-[2.8] origin-left mt-1 transition-all duration-300 group-hover:scale-[3.1]"
               />
             </a>
@@ -142,7 +142,7 @@ export default function Footer() {
         {/* ── Bottom Bar ── */}
         <div className={`relative z-10 border-t px-8 sm:px-12 lg:px-16 ${isDark ? 'border-[#c82aef]/20' : 'border-[#c82aef]/10'}`}>
           <div className={`max-w-7xl mx-auto py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-[12px] font-medium ${isDark ? 'text-gray-500' : 'text-[#8a8aaa]'}`}>
-            <p>© 2025 Fyd Marketing. Fox Creation All Rights Reserved.</p>
+            <p>© 2025 Fyd Squad. Fox Creation All Rights Reserved.</p>
             <div className="flex items-center gap-5">
               <a href="#" className="hover:text-[#c82aef] transition-colors relative z-10">Terms of Service</a>
               <a href="#" className="hover:text-[#c82aef] transition-colors relative z-10">Privacy Policy</a>

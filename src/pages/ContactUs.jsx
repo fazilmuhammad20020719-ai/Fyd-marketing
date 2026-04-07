@@ -85,7 +85,7 @@ export default function ContactUs() {
                 </div>
                 <div>
                   <p className={`text-xs font-bold uppercase tracking-wider mb-1 ${isDark ? 'text-gray-500' : 'text-gray-500'}`}>Office Address</p>
-                  <p className={`text-lg font-bold leading-tight ${isDark ? 'text-white' : 'text-gray-900'}`}>Fyd Marketing HQ – 902 Digital<br />Lane, San Francisco, CA<br />94110, USA</p>
+                  <p className={`text-lg font-bold leading-tight ${isDark ? 'text-white' : 'text-gray-900'}`}>Fyd Squad HQ – 902 Digital<br />Lane, San Francisco, CA<br />94110, USA</p>
                 </div>
               </div>
             </div>

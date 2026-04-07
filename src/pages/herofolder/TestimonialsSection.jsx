@@ -9,7 +9,7 @@ const TESTIMONIALS = [
     name: 'Emma Richard',
     role: 'CEO Nexatech',
     avatar: avatar1,
-    quote: '"Fyd Marketing completely transformed our online presence! Their digital marketing strategies helped us double our revenue in just six months."',
+    quote: '"Fyd Squad completely transformed our online presence! Their digital marketing strategies helped us double our revenue in just six months."',
   },
   {
     name: 'David Mont',
@@ -121,7 +121,7 @@ export default function TestimonialsSection() {
 
             {/* Description */}
             <p className="text-[#c82aef] text-[14.5px] sm:text-[15.5px] font-semibold leading-relaxed max-w-xl">
-              Discover how businesses like yours achieved outstanding growth with Fyd Marketing's expert digital marketing solutions.
+              Discover how businesses like yours achieved outstanding growth with Fyd Squad's expert digital marketing solutions.
             </p>
           </div>
         </div>

@@ -54,7 +54,7 @@ export default function HeroPage() {
           {/* Middle — Description */}
           <div className={`mt-8 max-w-2xl mx-auto transition-all duration-1000 ease-out delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <p className="text-base sm:text-lg leading-relaxed text-gray-300">
-              Fyd Marketing empowers businesses to grow online with data driven digital marketing,
+              Fyd Squad empowers businesses to grow online with data driven digital marketing,
               innovative branding, and performance focused strategies trusted by top
               brands lorem ipsum dolor sit amet consectetur.
             </p>

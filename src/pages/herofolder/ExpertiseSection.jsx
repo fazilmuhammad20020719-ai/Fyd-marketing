@@ -59,7 +59,7 @@ export default function ExpertiseSection() {
 
           {/* Description */}
           <p className={`text-[15px] sm:text-base leading-relaxed mb-10 max-w-xl ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
-            At Fyd Marketing, we specialize in crafting innovative digital marketing strategies that drive real
+            At Fyd Squad, we specialize in crafting innovative digital marketing strategies that drive real
             business growth. Our expertise ensures your brand stays ahead in the competitive
             digital landscape.
           </p>
