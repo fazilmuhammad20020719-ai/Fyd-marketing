@@ -9,12 +9,10 @@ const navLinks = [
   { label: 'About', href: '/about' },
   {
     label: 'Services',
-    href: '/#services',
+    href: '/services',
     children: [
-      { label: 'SEO Optimization', href: '/#seo' },
-      { label: 'Social Media', href: '/#social' },
-      { label: 'Content Marketing', href: '/#content' },
-      { label: 'PPC Advertising', href: '/#ppc' },
+      { label: 'Service', href: '/services' },
+      { label: 'Single Services', href: '/services/single' },
     ],
   },
   {
@@ -22,8 +20,20 @@ const navLinks = [
     href: '/#pages',
     children: [
       { label: 'Case Studies', href: '/#cases' },
-      { label: 'Testimonials', href: '/#testimonials' },
-      { label: 'Pricing', href: '/#pricing' },
+      { label: 'Our Team', href: '/#team' },
+      { label: 'Partnership', href: '/#partnership' },
+      { label: 'Pricing Plan', href: '/#pricing' },
+      { label: 'Testimonial', href: '/#testimonial' },
+      { label: 'FAQs', href: '/#faqs' },
+      { label: 'Error 404', href: '/#404' },
+    ],
+  },
+  {
+    label: 'Archive',
+    href: '/#archive',
+    children: [
+      { label: 'Blog', href: '/#blog' },
+      { label: 'Single Post', href: '/#single-post' },
     ],
   },
   { label: 'Contact Us', href: '/contact' },
@@ -128,8 +138,8 @@ export default function Navbar() {
               <Link
                 to={link.href}
                 className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 flex items-center gap-1 ${isActive(link.href)
-                  ? isDark 
-                    ? 'text-purple-400 bg-purple-500/10 shadow-[0_0_15px_rgba(168,85,247,0.15)]' 
+                  ? isDark
+                    ? 'text-purple-400 bg-purple-500/10 shadow-[0_0_15px_rgba(168,85,247,0.15)]'
                     : 'text-purple-600 bg-purple-50 shadow-sm'
                   : isDark
                     ? 'text-gray-300 hover:text-white hover:bg-white/5'
@@ -165,8 +175,8 @@ export default function Navbar() {
                         key={child.label}
                         to={child.href}
                         className={`block px-4 py-2.5 text-sm rounded-lg transition-all duration-200 ${isActive(child.href)
-                          ? isDark 
-                            ? 'text-purple-400 bg-purple-500/10' 
+                          ? isDark
+                            ? 'text-purple-400 bg-purple-500/10'
                             : 'text-purple-700 bg-purple-100/50'
                           : isDark
                             ? 'text-gray-300 hover:text-white hover:bg-purple-500/15'
@@ -237,8 +247,8 @@ export default function Navbar() {
               <Link
                 to={link.href}
                 className={`block px-4 py-3 text-sm font-medium rounded-lg transition-all ${isActive(link.href)
-                  ? isDark 
-                    ? 'text-purple-400 bg-purple-500/10' 
+                  ? isDark
+                    ? 'text-purple-400 bg-purple-500/10'
                     : 'text-purple-600 bg-purple-50'
                   : isDark
                     ? 'text-gray-300 hover:text-white hover:bg-white/5'
